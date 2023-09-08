@@ -4,5 +4,12 @@ RewriteCond %{HTTP_HOST} ^www.
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI}  [L,R=301,NE]
 
+Options +FollowSymlinks
+Options -Indexes
+
+RewriteEngine On
+RewriteRule \.(js|css|map|jpe?g|svg|gif|png|eot|ttf|woff2?)(\?.*)?$ - [NC,QSA,L]
+RewriteRule .* index.html [NC,QSA,L]
+
 RewriteCond %{REQUEST_URI} !^public
 RewriteRule ^(.*)$ public/$1 [L]

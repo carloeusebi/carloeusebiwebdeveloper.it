@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Dsp\RouteController as DspController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/dsp', [DspController::class, 'index']);
+Route::get('/dsp/{any}', [DspController::class, 'index']);
+
 
 Route::get('/', function () {
     return view('home');
