@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'dsp' => [
+            'driver' => 'session',
+            'provider' => 'dsp_users'
+        ]
     ],
 
     /*
@@ -64,6 +68,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+
+        'dsp_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Dsp\User::class
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
