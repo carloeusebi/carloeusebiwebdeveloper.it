@@ -10,7 +10,7 @@ class RouteController extends Controller
 {
     public function index()
     {
-        $pathToIndex =  base_path() . '/dsp/dist/index.html'; // Update with the actual path
+        $pathToIndex =  base_path() . '/dsp/index.html'; // Update with the actual path
 
         // Check if the index.html file exists
         if (File::exists($pathToIndex)) {
