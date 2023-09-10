@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Dsp;
 
-use App\Services\CodiceFiscale;
-use App\Models\Patient;
-use App\Services\VerifaliaService;
+use App\Services\Dsp\CodiceFiscale;
+use App\Models\Dsp\Patient;
+use App\Services\Dsp\VerifaliaService;
 use Carbon\Carbon;
 use DateTime;
 use Illuminate\Foundation\Http\FormRequest;

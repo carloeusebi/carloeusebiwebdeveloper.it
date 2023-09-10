@@ -3,25 +3,25 @@
 namespace App\Http\Controllers\Dsp;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ContactFormRequest;
-use App\Http\Requests\ContactSupportRequest;
+use App\Http\Requests\Dsp\ContactFormRequest;
+use App\Http\Requests\DspContactSupportRequest;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactForm;
-use App\Mail\ContactSupportMail;
-use App\Mail\LinkToTest;
+// use App\Mail\ContactForm;
+use App\Mail\Dsp\ContactSupportMail;
+use App\Mail\Dsp\LinkToTest;
 use App\Services\VerifaliaService;
 use Illuminate\Http\Request;
 
 class MailController extends Controller
 {
-    public function sendFromForm(ContactFormRequest $request)
-    {
-        $data = $request->all();
-        $emailTo = env('MAIL_TO');
+    // public function sendFromForm(ContactFormRequest $request)
+    // {
+    //     $data = $request->all();
+    //     $emailTo = env('MAIL_TO');
 
-        Mail::to($emailTo)->send(new ContactForm($data));
-        return redirect()->back()->with('status', 'success');
-    }
+    //     Mail::to($emailTo)->send(new ContactForm($data));
+    //     return redirect()->back()->with('status', 'success');
+    // }
 
 
     public function sendEmailWithTestLink(Request $request)

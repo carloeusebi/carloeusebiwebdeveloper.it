@@ -2,9 +2,8 @@
 
 namespace App\Http\Requests\Dsp;
 
-use App\Services\VerifaliaService;
+use App\Services\Dsp\VerifaliaService;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Validator;
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dsp\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\File;
+use App\Models\Dsp\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 

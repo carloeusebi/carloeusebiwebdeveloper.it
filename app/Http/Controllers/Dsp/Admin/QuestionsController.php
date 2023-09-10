@@ -5,9 +5,6 @@ namespace App\Http\Controllers\Dsp\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dsp\QuestionRequest;
 use App\Models\Dsp\Question;
-use App\Services\QuestionVersionControlService;
-use Illuminate\Http\Request;
-use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
 class QuestionsController extends Controller
 {
