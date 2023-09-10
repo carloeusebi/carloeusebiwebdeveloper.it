@@ -32,7 +32,7 @@ Route::prefix('/dellasanta')->group(function () {
         Route::post('/email/test-link', [MailController::class, 'sendEmailWithTestLink']);
     });
 
-    Route::prefix('/tests')->middleware('patient')->controller(TestsController::class)->name('tests.')->group(function () {
+    Route::prefix('/tests')->middleware('dsp.patient')->controller(TestsController::class)->name('tests.')->group(function () {
         Route::get('/{token}', 'show')->name('show');
         Route::put('/{id}', 'update')->name('update');
         Route::put('/patient/{id}', 'updatePatientInfo')->name('patient');
