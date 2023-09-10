@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\Dsp;
 
-use App\Models\Survey;
+use App\Models\Dsp\Survey;
 use Closure;
 use Illuminate\Http\Request;
 

@@ -12,7 +12,6 @@ use App\Http\Controllers\Dsp\TestsController;
 
 Route::prefix('/dellasanta')->group(function () {
 
-
     Route::post('/login', [AuthController::class, 'login']);
     Route::delete('/logout', [AuthController::class, 'logout']);
 
