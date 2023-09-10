@@ -25,7 +25,7 @@ class SurveysController extends Controller
         //validation
         $request->validate([
             'title' => 'required|string|max:80',
-            'patient_id' => 'required|exists:patients,id',
+            'patient_id' => 'required|exists:mysql2.patients,id',
             'questionIds' => 'required',
         ]);
 

@@ -13,7 +13,7 @@ class FilesController extends Controller
     {
         $request->validate([
             'file' => 'required|file|mimes:pdf',
-            'patient_id' => 'required|exists:patients,id' //Checks the patient_id exists in patients table
+            'patient_id' => 'required|exists:mysql2.patients,id' //Checks the patient_id exists in patients table
         ]);
 
         $file = $request->file('file');
