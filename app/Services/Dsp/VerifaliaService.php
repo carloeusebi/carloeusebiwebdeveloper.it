@@ -112,7 +112,7 @@ class VerifaliaService
    */
   private function emailWasAlreadyValidated(string $email): bool
   {
-    return DB::table('emails')->where('email', '=', $email)->exists();
+    return DB::connection('mysql2')->table('emails')->where('email', '=', $email)->exists();
   }
 
 
@@ -121,12 +121,12 @@ class VerifaliaService
    */
   private function logValidEmail(string $email)
   {
-    DB::table('emails')->insert(['email' => $email, 'validated_at' => now()]);
+    DB::connection('mysql2')->table('emails')->insert(['email' => $email, 'validated_at' => now()]);
   }
 
 
   private function logIssue(string $message)
   {
-    DB::table('logs')->insert(['message' => $message]);
+    DB::connection('mysql2')->table('logs')->insert(['message' => $message]);
   }
 }
