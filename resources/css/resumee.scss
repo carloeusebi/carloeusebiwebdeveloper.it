@@ -1,0 +1,40 @@
+$main-color: #414042;
+
+body {
+    font-family: "roboto", sans-serif;
+    color: $main-color;
+}
+
+header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $main-color;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+aside {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid $main-color;
+    font-style: normal;
+
+    li i::before {
+        display: block;
+        min-width: 18px;
+        text-align: center;
+    }
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+address {
+    font-style: normal;
+}

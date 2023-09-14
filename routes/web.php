@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/resumee', function () {
+    return view('resumee');
+})->name('resumee');
+
 Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
