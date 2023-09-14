@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carlo Eusebi</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/resumee.scss'])
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
@@ -14,11 +13,16 @@
 </head>
 
 <body>
-    <div class="container mx-auto max-w-5xl">
-        <header class="flex justify-between mt-10 items-end">
+    <div class="container mx-auto max-w-5xl" x-data>
+        <header class="flex justify-between mt-10 items-center">
             <div>
                 <h1 class="text-6xl uppercase">Carlo Eusebi</h1>
                 <div class="text-2xl">Full Stack Web Developer</div>
+            </div>
+            <div class="print:hidden">
+                <button type="button" class="p-1" @click="AlpineI18n.locale = 'it'">IT</button>
+                |
+                <button type="button" class="p-1" @click="AlpineI18n.locale = 'en'">EN</button>
             </div>
         </header>
         <div class="flex">
@@ -58,25 +62,20 @@
             </aside>
             <main>
                 <section>
-                    <h2>About me</h2>
+                    <h2 x-text="$t('About me')"></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quod corrupti voluptates! Ex
                         sint eos delectus illum, non pariatur sit laboriosam facilis a aliquid ullam saepe sapiente
                         blanditiis beatae. Minima.</p>
                 </section>
                 <section>
-                    <h2>Education</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores qui laudantium, earum facilis
-                        aut nobis expedita perferendis nesciunt pariatur, minus tempore aperiam reprehenderit culpa, nam
-                        ipsa veniam modi accusamus blanditiis.</p>
+                    <h2 x-text="$t('Courses')"></h2>
+                    <p x-text="$t('boolean')"></p>
                 </section>
                 <section>
-                    <h2>Projects</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ratione quod enim mollitia sint
-                        atque cum quibusdam ad id labore modi, dolores aliquam ipsa natus tempore hic veritatis quos
-                        ducimus.</p>
+                    <h2 x-text="$t('Projects')"></h2>
                 </section>
                 <section>
-                    <h2>Skills</h2>
+                    <h2 x-text="$t('Skills')"></h2>
                     <div>
 
                     </div>
