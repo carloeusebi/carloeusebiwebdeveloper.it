@@ -10,7 +10,7 @@ use App\Http\Controllers\Dsp\Admin\TagsController;
 use App\Http\Controllers\Dsp\Admin\FilesController;
 use App\Http\Controllers\Dsp\TestsController;
 
-Route::prefix('/dellasanta')->group(function () {
+Route::prefix('/dellasanta')->middleware('dsp.localize')->group(function () {
 
     Route::post('/login', [AuthController::class, 'login']);
     Route::delete('/logout', [AuthController::class, 'logout']);
