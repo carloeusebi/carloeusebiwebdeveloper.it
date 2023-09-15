@@ -16,8 +16,8 @@
     <div class="container mx-auto max-w-5xl" x-data>
         <header class="flex justify-between mt-10 items-center">
             <div>
-                <h1 class="text-6xl uppercase">Carlo Eusebi</h1>
-                <div class="text-2xl">Full Stack Web Developer</div>
+                <h1 class="text-4xl uppercase">Carlo Eusebi</h1>
+                <div class="text-xl">Full Stack Web Developer</div>
             </div>
             <div class="print:hidden">
                 <button type="button" class="p-1" @click="AlpineI18n.locale = 'it'">IT</button>
@@ -27,8 +27,8 @@
         </header>
         <div class="flex">
             <aside>
-                <h3 class="text-xl mb-3">Contacts</h3>
-                <address class="min-w-[225px]">
+                <h3 class="text-xl mb-3" x-text="$t('Contacts')"></h3>
+                <address class="min-w-[200px] print:min-w-[150px] mb-10">
                     <ul>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
@@ -59,29 +59,90 @@
                         </li>
                     </ul>
                 </address>
+                <section>
+                    <h3 class="text-xl mb-3">Skills</h3>
+                    <div>
+                        <ul>
+                            <li>English - C1</li>
+                            <li>Html, Css & Sass</li>
+                            <li>Bootsrap</li>
+                            <li>Tailwind</li>
+                            <li>Javascript</li>
+                            <li>Typescript</li>
+                            <li>Vue 3</li>
+                            <li>Vuex</li>
+                            <li>Pinia</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>Laravel</li>
+                            <li>Linux & Windows</li>
+                            <li>Git</li>
+                            <li>GitHub Workflows</li>
+                        </ul>
+                    </div>
+                </section>
             </aside>
-            <main>
+            <main class="text-justify">
                 <section>
                     <h2 x-text="$t('About me')"></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quod corrupti voluptates! Ex
-                        sint eos delectus illum, non pariatur sit laboriosam facilis a aliquid ullam saepe sapiente
-                        blanditiis beatae. Minima.</p>
+                    <p class="mb-1" x-text="$t('about-me-1')"></p>
+                    <p class="mb-1" x-text="$t('about-me-2')"></p>
+                    <p class="mb-1" x-text="$t('about-me-3')"></p>
+                    <p class="mb-1" x-text="$t('about-me-4')"></p>
                 </section>
                 <section>
-                    <h2 x-text="$t('Courses')"></h2>
+                    <h2 x-text="$t('Education')"></h2>
+                    <p class="text-lg">Boolean - Master Full Stack Web Developer</p>
                     <p x-text="$t('boolean')"></p>
                 </section>
                 <section>
                     <h2 x-text="$t('Projects')"></h2>
-                </section>
-                <section>
-                    <h2 x-text="$t('Skills')"></h2>
-                    <div>
+                    <p x-text="$t('projects-essay')">I have made plenty of little and medium size projects, some of them
+                        you can check on my
+                        website and most of them you can find on my github. This is the project I am
+                        the most proud of:</p>
+                    {{-- DSP START --}}
+                    <div class="mb-2">
+                        <h4 class="text-lg">Dellasanta Psicologo</h4>
 
+                        <div>Links: <a class="underline" href="https://dellasantapsicologo.it"
+                                target="_blank">dellasantapsicologo.it</a> -
+                            <a class="underline" href="https://carloeusebiwebdeveloper.it/dsp" target="_blank">demo
+                                Admin Panel</a>
+                        </div>
+                        <div>Github:
+                            <a class="underline" href="https://github.com/carloeusebi/laravel-dsp"
+                                target="_blank">laravel-dsp (Backend)</a> -
+                            <a class="underline" href="https://github.com/carloeusebi/vue-dsp" target="_blank">vue-dsp
+                                (Frontend)</a>
+                        </div>
                     </div>
-                </section>
-            </main>
+                    <p><span x-text="$t('Technologies')"></span>: Vue 3, Pinia, Typescript, Tailwind, Laravel,
+                        Sanctum</p>
+                    <h5 class="font-bold mt-3" x-text="$t('Overview:')"></h5>
+                    <p x-text="$t('dsp-overview')"></p>
+                    <h5 class="font-bold my-3" x-text="$t('Key Features:')"></h5>
+                    <ol class="mb-3">
+                        <li><strong x-text="$t('Psychological Evaluation Questionnaires')"></strong>:
+                            <span x-text="$t('dsp-peq')"></span>
+                        </li>
+                        <li><strong x-text="$t('Patient Convenience')"></strong>:
+                            <span x-text="$t('dsp-convenience')"></span>
+                        </li>
+                        <li><strong x-text="$t('Effortless Data Management')"></strong>:
+                            <span x-text="$t('dsp-management')"></span>
+                        </li>
+                        <li><strong x-text="$t('Data Accessibility')"></strong>:
+                            <span x-text="$t('dsp-accessibility')"></span>
+                        </li>
+                    </ol>
+                    <h5 class="font-bold" x-text="$t('Outcome:')"></h5>
+                    <p x-text="$t('dsp-outcome')"></p>
         </div>
+        {{-- DSP END --}}
+        </section>
+        </main>
+    </div>
     </div>
 
 </body>
