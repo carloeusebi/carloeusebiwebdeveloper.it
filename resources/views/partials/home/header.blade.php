@@ -35,17 +35,10 @@
     {{-- NAVIGATION BAR --}}
     <nav class="grow">
         <ul class="nav-links p-10">
-            {{-- <template x-for="link in navLinks" :key="link.label">
-                <li @click=scrollToSection(link.name) :class="{ active: activeLink === link.name }">
-                    <i :class="['link.solid ? fa-solid : fa-regular', `fa-${link.icon}`]"></i>
-                    <span x-text="link.label"></span>
-                </li>
-            </template> --}}
             @foreach ($navLinks as $link)
                 <li @click="scrollToSection('{{ $link['name'] }}')"
                     :class="{ active: '{{ $link['name'] }}' === activeLink }">
-                    <i {{ $slot }}
-                        class="fa-{{ isset($link['solid']) ? 'solid' : 'regular' }} fa-{{ $link['icon'] }}"></i>
+                    <i class="fa-{{ isset($link['solid']) ? 'solid' : 'regular' }} fa-{{ $link['icon'] }}"></i>
                     {{ __($link['label']) }}
                 </li>
             @endforeach
@@ -54,9 +47,12 @@
 
     {{-- BOTTOM --}}
     <div class="text-center text-white py-2">
-        <button class="px-2 py-1" @click="console.log('it')">IT</button>
-        |
-        <button class="px-2 py-1" @click="console.log('en')">EN</button>
+        {{-- todo language selector --}}
+        <div>
+            <a href="{{ route('translate', 'it') }}">IT</a>
+            |
+            <a href="{{ route('translate', 'en') }}">EN</a>
+        </div>
         <div>
             <small>Made with Laravel Livewire</small>
         </div>

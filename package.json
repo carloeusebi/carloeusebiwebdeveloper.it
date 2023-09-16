@@ -18,6 +18,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@alpinejs/intersect": "^3.13.0",
         "alpinejs-i18n": "^2.4.0"
     }
 }

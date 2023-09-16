@@ -1,4 +1,5 @@
 import Alpine from "alpinejs";
+import intersect from "@alpinejs/intersect";
 
 window.Alpine = Alpine;
 
@@ -17,8 +18,8 @@ Alpine.data("data", () => ({
     scrollToSection(section) {
         const sectionToScrollTo = document.getElementById(section);
         sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
-        this.activeLink = section;
     },
 }));
 
+Alpine.plugin(intersect);
 Alpine.start();
