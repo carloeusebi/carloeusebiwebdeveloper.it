@@ -11,11 +11,12 @@ $even-section-background: #f5f8fd;
 }
 
 .page,
-header {
+.main-header {
     background-color: $main-color;
 }
 
-aside {
+.main-header {
+    height: 100svh;
     font-family: "Poppins", sans-serif;
 }
 

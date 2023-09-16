@@ -1,5 +1,5 @@
 <header
-    class="bg-[#040b14] pt-7 w-[300px] lg:translate-x-0 fixed lg:static flex h-screen flex-col transition-transform duration-500 select-none z-10"
+    class="main-header pt-7 w-[300px] lg:translate-x-0 fixed lg:static flex flex-col transition-transform duration-500 select-none z-10"
     :class="{ 'translate-x-0': open, 'translate-x-[-300px]': !open }">
 
     {{-- TOP PART --}}
