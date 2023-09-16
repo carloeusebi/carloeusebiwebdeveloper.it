@@ -54,7 +54,7 @@
             <a href="{{ route('translate', 'en') }}">EN</a>
         </div>
         <div>
-            <small>Made with Laravel Livewire</small>
+            <small>Made with Laravel and AlpineJs</small>
         </div>
     </div>
 

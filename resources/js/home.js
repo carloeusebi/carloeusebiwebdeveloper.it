@@ -18,6 +18,7 @@ Alpine.data("data", () => ({
     scrollToSection(section) {
         const sectionToScrollTo = document.getElementById(section);
         sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+        this.activeLink = section;
     },
 }));
 

@@ -1,6 +1,8 @@
-$bg-color: #040b14;
+$main-color: #040b14;
 $gray-color: #2c2f3f;
 $hover-color: #149ddd;
+
+$even-section-background: #f5f8fd;
 
 @mixin flex-center {
     display: flex;
@@ -10,7 +12,7 @@ $hover-color: #149ddd;
 
 .page,
 header {
-    background-color: $bg-color;
+    background-color: $main-color;
 }
 
 aside {
@@ -19,6 +21,45 @@ aside {
 
 main {
     font-family: "Raleway", sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    color: $main-color;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: $hover-color;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+section {
+    min-height: 105vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &:nth-child(even) {
+        background-color: #fff;
+    }
+
+    &:nth-child(odd) {
+        background-color: $even-section-background;
+    }
+
+    .container {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
 }
 
 .profile-pic {
@@ -69,7 +110,7 @@ main {
 }
 
 .navbar-toggle {
-    background-color: $bg-color;
+    background-color: $main-color;
     border-radius: 50%;
     width: 50px;
     aspect-ratio: 1;
