@@ -45,8 +45,7 @@ h2 {
 
 section {
     min-height: 105vh;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 1.5rem;
 
     &:nth-child(even) {
         background-color: #fff;

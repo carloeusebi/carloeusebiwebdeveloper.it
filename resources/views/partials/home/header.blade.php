@@ -5,7 +5,7 @@
     {{-- TOP PART --}}
     <div class="flex flex-col items-center">
         {{-- profile pic --}}
-        <figure class="profile-pic max-w-[150px] aspect-square rounded-full overflow-hidden">
+        <figure class="profile-pic max-w-[100px] lg:max-w-[150px] aspect-square rounded-full overflow-hidden">
             <img src="{{ asset('images/profile_pic.webp') }}" alt="Carlo Eusebi">
         </figure>
         <h3 class="text-white text-2xl font-semibold mt-4">Carlo Eusebi</h3>
@@ -34,7 +34,7 @@
 
     {{-- NAVIGATION BAR --}}
     <nav class="grow">
-        <ul class="nav-links p-10">
+        <ul class="nav-links p-5 lg:p-10">
             @foreach ($navLinks as $link)
                 <li @click="scrollToSection('{{ $link['name'] }}')"
                     :class="{ active: '{{ $link['name'] }}' === activeLink }">
