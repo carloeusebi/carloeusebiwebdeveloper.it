@@ -2,9 +2,10 @@
 
     @include('partials.home.header')
 
-    <main class="overflow-auto p-0 h-screen grow">
+    <main class="overflow-auto p-0 h-screen grow overflow-x-hidden">
 
-        <section id="jumbo" class="min-h-[105vh] bg-slate-600" x-intersect:enter="activeLink = 'jumbo'">
+        <section id="jumbo" class="min-h-[105vh] bg-slate-600" x-intersect:enter="activeLink = 'jumbo'; show = true"
+            x-intersect:leave="show = false" x-data="{ show: false }">
             @include('partials.home.jumbo')
         </section>
 

@@ -53,7 +53,7 @@ main {
             display: inline-flex;
             justify-content: center;
             width: 20px;
-            padding-right: 1.5rem;
+            padding-right: 0.75rem;
         }
 
         &:hover,
@@ -73,4 +73,26 @@ main {
     border-radius: 50%;
     width: 50px;
     aspect-ratio: 1;
+}
+
+#jumbo {
+    background-image: url("../images/jumbo.webp");
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.75);
+        position: absolute;
+        display: block;
+        inset: 0;
+    }
+
+    header {
+        position: relative;
+        background-color: transparent;
+        z-index: 2;
+    }
 }

@@ -1,5 +1,5 @@
 <header
-    class="bg-[#040b14] pt-7 w-[300px] lg:translate-x-0 fixed lg:static flex h-screen flex-col transition-transform duration-500"
+    class="bg-[#040b14] pt-7 w-[300px] lg:translate-x-0 fixed lg:static flex h-screen flex-col transition-transform duration-500 select-none z-10"
     :class="{ 'translate-x-0': open, 'translate-x-[-300px]': !open }">
 
     {{-- TOP PART --}}
@@ -38,7 +38,7 @@
             @foreach ($navLinks as $link)
                 <li @click="scrollToSection('{{ $link['name'] }}')"
                     :class="{ active: '{{ $link['name'] }}' === activeLink }">
-                    <i class="fa-{{ isset($link['solid']) ? 'solid' : 'regular' }} fa-{{ $link['icon'] }}"></i>
+                    <i class="fa-{{ isset($link['solid']) ? 'solid' : 'regular' }} fa-{{ $link['icon'] }} fa-lg"></i>
                     {{ __($link['label']) }}
                 </li>
             @endforeach
@@ -63,7 +63,7 @@
 
 
 {{-- HAMBURGER --}}
-<div class="navbar-toggle flex justify-center items-center lg:hidden fixed top-8 right-8 bg-black text-white"
+<div class="navbar-toggle flex justify-center items-center lg:hidden fixed top-8 right-8 bg-black text-white z-20"
     @click="open = !open">
     <template x-if="!open">
         <i class="fa-solid fa-bars"></i>
