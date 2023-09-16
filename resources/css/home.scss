@@ -1,0 +1,76 @@
+$bg-color: #040b14;
+$gray-color: #2c2f3f;
+$hover-color: #149ddd;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page,
+header {
+    background-color: $bg-color;
+}
+
+aside {
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    font-family: "Raleway", sans-serif;
+}
+
+.profile-pic {
+    border: 8px solid $gray-color;
+}
+
+.social-links a {
+    @include flex-center;
+    color: white;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    aspect-ratio: 1;
+    padding: 0.66rem;
+    background-color: $gray-color;
+
+    transition: background-color 300ms;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.nav-links {
+    li {
+        cursor: pointer;
+        color: #a8a9b4;
+        display: block;
+        padding: 0.8rem 0;
+
+        i {
+            display: inline-flex;
+            justify-content: center;
+            width: 20px;
+            padding-right: 1.5rem;
+        }
+
+        &:hover,
+        &.active {
+            color: white;
+
+            i {
+                text-shadow: 0 0 4px $hover-color;
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+.navbar-toggle {
+    background-color: $bg-color;
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1;
+}
