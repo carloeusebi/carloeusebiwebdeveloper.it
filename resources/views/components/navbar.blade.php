@@ -39,6 +39,14 @@
         {{-- NAVIGATION BAR --}}
         <nav class="grow">
             <ul class="nav-links p-5 lg:p-10">
+                @auth
+                    <li>
+                        <a href="{{ route('admin.dashboard') }}">
+                            <i class="fa-solid fa-unlock-keyhole"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                @endauth
                 @foreach ($navLinks as $link)
                     <li @click="scrollToSection('{{ $link['name'] }}')"
                         :class="{ active: '{{ $link['name'] }}' === activeLink }">
@@ -52,12 +60,7 @@
 
         {{-- BOTTOM --}}
         <div class="text-center text-white py-2">
-            {{-- todo language selector --}}
-            <div>
-                <a href="{{ route('translate', 'it') }}">IT</a>
-                |
-                <a href="{{ route('translate', 'en') }}">EN</a>
-            </div>
+            <x-language-selector />
             <div>
                 <small>Made with Laravel and AlpineJs</small>
             </div>

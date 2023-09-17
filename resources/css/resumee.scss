@@ -7,15 +7,41 @@ body {
 #resumee {
     text-align: justify;
 
+    header img {
+        float: right;
+    }
+
+    .float-left {
+        float: left;
+    }
+
+    header::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    hr {
+        margin: 1rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        border-bottom: 2px solid $hover-color;
+    }
+
     h3 {
         font-size: 1.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
     }
 
     h4 {
         text-transform: uppercase;
         font-weight: bold;
+        margin-bottom: 0.5rem;
 
         & + div {
             font-weight: bold;
@@ -23,23 +49,44 @@ body {
         }
     }
 
+    address {
+        font-style: normal;
+
+        ul {
+            border-left: 3px solid gray;
+            padding-left: 1rem;
+        }
+
+        i {
+            width: 20px;
+            text-align: center;
+        }
+    }
+
     .category {
         border-left: 3px solid $hover-color;
         padding-left: 1rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0.5rem;
 
         .period {
             display: inline-block;
             font-weight: 900;
-            margin-bottom: 1rem;
             padding: 0.33rem;
+            margin-bottom: 0.5rem;
             color: $hover-color;
             background-color: $light-blue;
         }
 
         p {
-            padding-left: 0.5rem;
-            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
         }
+    }
+}
+
+.app-button {
+    background-color: $hover-color;
+
+    &:hover {
+        opacity: 0.8;
     }
 }

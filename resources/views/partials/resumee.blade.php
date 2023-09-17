@@ -7,11 +7,17 @@
             <p>
                 {{ __('messages.education-boolean') }}
             </p>
+            <h4>{{ __('messages.diploma') }}</h4>
+            <div>{{ __('messages.diploma-title') }}</div>
+            <span class="period">2010</span>
+            <p>
+                {{ __('messages.diploma-description') }}
+            </p>
         </div>
         <h3>{{ __('Skills') }}</h3>
         <div class="category">
             <h4>{{ __('Technical Skills') }}</h4>
-            <ul class="mb-3">
+            <ul>
                 <li>
                     <strong>Frontend</strong>: Html, Css, Sass, Bootstrap, Tailwind, Javascript, Typescript, Vue 3,
                     AlpineJs;
@@ -30,7 +36,7 @@
                 <li>{{ __('English') }} - C1</li>
                 <li>{{ __('Problem Solving') }}</li>
                 <li>{{ __('Teamwork and Communication') }}</li>
-                <li>{{ __('Deadline and time management') }}</li>
+                <li>{{ __('Deadline and Time Management') }}</li>
             </ul>
         </div>
 

@@ -21,6 +21,14 @@ return [
     opportunity to develop both individual and team projects with the goal of creating web appications.
     Technologies utilized included: Html, Css, Sass, Bootstrap, Javascript, VueJs, PHP, MySQL and Laravel.',
 
+
+    'diploma' => 'High School Diploma',
+
+    'diploma-title' => 'Commercial Expert Accountant and Programmer',
+
+    'diploma-description' => 'I got my first taste of procedural programming through C. It was like diving into a whole new world of breaking down complex tasks into smaller, manageable steps. That experience not only sharpened my problem-solving skills but also introduced me to the fundamentals of structured programming. To this day, it\'s where my coding journey all began.',
+
+
     'experience-boolean-part-1' => 'A 6-month bootcamp during which, thanks to the methods and technologies learned, I had the opportunity to develop both independently and in teams <strong>projects</strong> aimed at replicating well-known web applications.',
 
     'experience-boolean-part-2' => ' Development occurred on both the <strong>frontend</strong> and <strong>backend</strong> sides and culminated in the creation of a complete delivery website in all its parts, thanks to careful planning and organization.',

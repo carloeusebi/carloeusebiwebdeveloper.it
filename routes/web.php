@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResumeeController;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/resumee', function () {
-    return view('resumee');
-})->name('resumee');
+Route::prefix('/resumee')->controller(ResumeeController::class)->name('resumee.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/download-pdf', 'createPDF')->name('pdf');
+});
 
 Route::post('/contact-form', [MailController::class, 'contactForm'])->name('contact-form');
 

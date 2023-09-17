@@ -18,6 +18,14 @@ return [
 
     'education-boolean' => 'Corso intensivo di 700 ore teoriche e pratiche durante il quale ho avuto modo di studiare e padroneggiare le principali tecnologie frontend e backend quali Html, Css, Javascript, Bootstrap, PHP, Laravel e MySQL.',
 
+
+    'diploma' => 'Diploma d\'Istruzione Superiore',
+
+    'diploma-title' => 'Ragioniere Perito Commerciale e Programmatore',
+
+    'diploma-description' => 'La mia prima esperienza con la programmazione procedurale è avvenuta attraverso il linguaggio C. È stato come immergersi in un mondo completamente nuovo, scomponendo compiti complessi in passi più piccoli e gestibili. Questa esperienza non solo ha affinato le mie capacità di risoluzione dei problemi, ma mi ha anche introdotto alle fondamenta della programmazione strutturata. Ad oggi, è da qui che è iniziato il mio percorso nella programmazione',
+
+
     'experience-boolean-part-1' => ' Bootcamp della durata di 6 mesi durante il quale, grazie al metodo e alle tecnologie appresi, ho avuto
     modo di sviluppare sia in autonomia che in team <strong>progetti</strong> che avevano l\'obiettivo di replicare note web app.',
 

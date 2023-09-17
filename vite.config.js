@@ -9,7 +9,6 @@ export default defineConfig({
                 "resources/css/resumee.scss",
                 "resources/css/home.scss",
                 "resources/js/app.js",
-                "resources/js/home.js",
             ],
             refresh: true,
         }),
