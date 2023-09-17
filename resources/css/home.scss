@@ -16,8 +16,11 @@ $even-section-background: #f5f8fd;
 }
 
 .main-header {
-    height: 100svh;
+    height: 100vh;
     font-family: "Poppins", sans-serif;
+    .header-container {
+        height: 100vh;
+    }
 }
 
 main {
@@ -57,7 +60,7 @@ section {
     }
 
     .container {
-        max-width: 1150px;
+        max-width: 1280px;
         margin: 0 auto;
     }
 }
@@ -135,5 +138,25 @@ section {
         position: relative;
         background-color: transparent;
         z-index: 2;
+    }
+}
+
+#contact {
+    .contact-icons i::before {
+        @include flex-center();
+        color: $hover-color;
+        background-color: #dff3fc;
+        border-radius: 50%;
+        width: 45px;
+        aspect-ratio: 1;
+    }
+
+    form button {
+        background-color: $hover-color;
+
+        &:hover,
+        &:focus {
+            opacity: 0.8;
+        }
     }
 }

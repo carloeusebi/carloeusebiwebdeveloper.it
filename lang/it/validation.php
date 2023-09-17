@@ -125,15 +125,15 @@ return [
     'prohibited_unless' => ':attribute è proibito a meno che :other non sia :values.',
     'prohibits' => ':attribute proibisce a :other di essere presente.',
     'regex' => 'Il formato di :attribute non è valido.',
-    'required' => ':attribute è richiesto.',
+    'required' => ':attribute è obbligatorio.',
     'required_array_keys' => ':attribute deve contenere uno dei seguenti valori: :values.',
-    'required_if' => ':attribute è richiesto quando :other è :value.',
-    'required_if_accepted' => ':attribute è richiesto quando :other è accettato.',
-    'required_unless' => ':attribute è richiesto salvo che :other sia in :values.',
-    'required_with' => ':attribute è richiesto quando :values è presente.',
-    'required_with_all' => ':attribute è richiesto quando sono presenti :values.',
-    'required_without' => ':attribute è richiesto quando :values non è presente.',
-    'required_without_all' => ':attribute è richiesto quanto nessuno di :values è presente.',
+    'required_if' => ':attribute è obbligatorio quando :other è :value.',
+    'required_if_accepted' => ':attribute è obbligatorio quando :other è accettato.',
+    'required_unless' => ':attribute è obbligatorio salvo che :other sia in :values.',
+    'required_with' => ':attribute è obbligatorio quando :values è presente.',
+    'required_with_all' => ':attribute è obbligatorio quando sono presenti :values.',
+    'required_without' => ':attribute è obbligatorio quando :values non è presente.',
+    'required_without_all' => ':attribute è obbligatorio quanto nessuno di :values è presente.',
     'same' => ':attribute e :other devono corrispondere.',
     'size' => [
         'array' => ':attribute deve contenere :size elementi.',
@@ -179,6 +179,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => 'Il campo nome',
+        'email' => 'Il campo email',
+        'subject' => 'Il campo oggetto',
+        'message' => 'Il campo messaggio',
+    ],
 
 ];

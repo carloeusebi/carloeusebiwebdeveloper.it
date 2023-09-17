@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dsp\AuthController;
-use App\Http\Controllers\Dsp\MailController;
+use App\Http\Controllers\Dsp\MailController as DspMailController;
 use App\Http\Controllers\Dsp\Admin\PatientsController;
 use App\Http\Controllers\Dsp\Admin\QuestionsController;
 use App\Http\Controllers\Dsp\Admin\SurveysController;
@@ -29,7 +29,7 @@ Route::prefix('/dellasanta')->middleware('dsp.localize')->group(function () {
             Route::delete('/{id}', 'destroy');
         });
 
-        Route::post('/email/test-link', [MailController::class, 'sendEmailWithTestLink']);
+        Route::post('/email/test-link', [DspMailController::class, 'sendEmailWithTestLink']);
     });
 
     Route::prefix('/tests')->middleware('dsp.patient')->controller(TestsController::class)->name('tests.')->group(function () {
@@ -38,5 +38,5 @@ Route::prefix('/dellasanta')->middleware('dsp.localize')->group(function () {
         Route::put('/patient/{id}', 'updatePatientInfo')->name('patient');
     });
 
-    Route::post('email/support', [MailController::class, 'contactSupport']);
+    Route::post('email/support', [DspMailController::class, 'contactSupport']);
 });

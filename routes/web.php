@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/resumee', function () {
     return view('resumee');
 })->name('resumee');
+
+Route::post('/contact-form', [MailController::class, 'contactForm'])->name('contact-form');
 
 Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {

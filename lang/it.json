@@ -1,5 +1,12 @@
 {
     "About": "Su di me",
     "Resumee": "Curriculum",
-    "Contact": "Contatto"
+    "Contact": "Contatto",
+    "Location": "Residenza",
+    "Name": "Nome",
+    "Subject": "Oggetto",
+    "Message": "Messaggio",
+    "Send Message": "Invia Messaggio",
+    "Success": "Successo",
+    "Warning": "Attenzione"
 }
