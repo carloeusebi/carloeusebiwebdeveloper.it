@@ -142,13 +142,19 @@ section {
 }
 
 #contact {
-    .contact-icons i::before {
+    .contact-icons i {
         @include flex-center();
         color: $hover-color;
         background-color: #dff3fc;
         border-radius: 50%;
         width: 45px;
         aspect-ratio: 1;
+        transition: background-color 500ms;
+
+        &:hover {
+            color: white;
+            background-color: $hover-color;
+        }
     }
 
     form button {

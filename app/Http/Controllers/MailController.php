@@ -19,13 +19,13 @@ class MailController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('/#contact')->withErrors($validator)->withInput();
+            return back()->withErrors($validator)->withInput();
         }
 
 
         $data = $request->all();
         Mail::to(env('MAIL_TO_ADDRESS', 'carloeusebi@gmail.com'))->send(new Contact($data));
 
-        return redirect('/#contact')->with('success', __('messages.mail-sent'));
+        return back()->with('success', __('messages.mail-sent'));
     }
 }

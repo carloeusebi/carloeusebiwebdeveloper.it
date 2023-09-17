@@ -10,25 +10,30 @@
         <div class="col-span-3 bg-white min-h-[100px] rounded-lg shadow-lg lg:order-2">
 
             {{-- FORM --}}
-            <form action="{{ route('contact-form') }}" method="POST"
+            <form action="{{ route('contact-form') }}" method="POST" id="contact-form"
                 class="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-8 py-8 px-2 md:px-8" novalidate>
                 @csrf
 
 
                 {{-- ALERT --}}
                 <div class="col-span-full">
-                    @if (session('success'))
-                        <x-alert title="{{ __('Success') }}" type="success">
-                            {{ session('success') }}
-                        </x-alert>
-                    @elseif($errors->any())
-                        <x-alert title="{{ __('Warning') }}" type="warning">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </x-alert>
+                    @if (session('success') || $errors->any())
+                        <script>
+                            document.getElementById('contact-form').scrollIntoView();
+                        </script>
+                        @if (session('success'))
+                            <x-alert title="{{ __('Success') }}" type="success">
+                                {{ session('success') }}
+                            </x-alert>
+                        @else
+                            <x-alert title="{{ __('Warning') }}" type="warning">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </x-alert>
+                        @endif
                     @endif
                 </div>
 
