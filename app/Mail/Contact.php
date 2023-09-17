@@ -26,7 +26,7 @@ class Contact extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Ti hanno contattato',
+            subject: $this->data['subject'],
             replyTo: $this->data['email']
         );
     }

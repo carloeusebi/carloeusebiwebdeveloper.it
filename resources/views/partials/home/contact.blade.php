@@ -33,7 +33,7 @@
                 </div>
 
                 {{-- NAME --}}
-                <div class="cols-span-2 lg:col-span-1">
+                <div class="col-span-2 lg:col-span-1">
                     <label for="name" class="block text-sm font-medium leading-6 text-gray-900">
                         {{ __('Name') }}
                     </label>
