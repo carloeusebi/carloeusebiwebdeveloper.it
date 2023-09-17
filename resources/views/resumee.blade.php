@@ -13,7 +13,11 @@
 </head>
 
 <body>
-    @include('partials.resumee')
+    <div class="container px-4 max-w-5xl mx-auto">
+        <section id="resumee" class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            @include('partials.resumee')
+        </section>
+    </div>
 </body>
 
 </html>

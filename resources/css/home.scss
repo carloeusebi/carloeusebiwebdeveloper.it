@@ -1,8 +1,4 @@
-$main-color: #040b14;
-$gray-color: #2c2f3f;
-$hover-color: #149ddd;
-
-$even-section-background: #f5f8fd;
+@use "vars" as *;
 
 @mixin flex-center {
     display: flex;
@@ -145,7 +141,7 @@ section {
     .contact-icons i {
         @include flex-center();
         color: $hover-color;
-        background-color: #dff3fc;
+        background-color: $light-blue;
         border-radius: 50%;
         width: 45px;
         aspect-ratio: 1;
@@ -156,13 +152,12 @@ section {
             background-color: $hover-color;
         }
     }
+}
 
-    form button {
-        background-color: $hover-color;
+.app-button {
+    background-color: $hover-color;
 
-        &:hover,
-        &:focus {
-            opacity: 0.8;
-        }
+    &:hover {
+        opacity: 0.8;
     }
 }

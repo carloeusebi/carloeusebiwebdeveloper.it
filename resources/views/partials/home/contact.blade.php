@@ -88,7 +88,7 @@
                 {{-- SUBMIT BUTTON --}}
                 <div class="col-span-full mx-auto" x-data="{ showLoader: false }">
                     <button type="submit" @click="showLoader = true"
-                        class="rounded-m px-12 py-4 font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 relative">
+                        class="app-button rounded-m px-12 py-4 font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 relative">
                         <template x-if="showLoader">
                             <i class="fa-solid fa-circle-notch fa-spin absolute top-5 left-4"></i>
                         </template>
