@@ -21,8 +21,6 @@ class ResumeeController extends Controller
 
         $pdf = PDF::loadView('resumee', compact('cssString'));
 
-        return $pdf->stream();
-
-        // return $pdf->download('Carlo Eusebi');
+        return $pdf->stream('Carlo Eusebi');
     }
 }

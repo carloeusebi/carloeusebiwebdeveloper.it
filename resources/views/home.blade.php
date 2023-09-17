@@ -7,8 +7,7 @@
             @include('partials.home.jumbo')
         </section>
 
-        <section id="about" x-intersect:margin.4vh="activeLink = 'about'" x-data="{ show: false }"
-            x-intersect:enter="show = true">
+        <section id="about" x-intersect:margin.4vh="activeLink = 'about'">
             @include('partials.home.about')
         </section>
 
