@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Personal Portfolio for Web Developer Carlo Eusebi">
+    <meta name="author" content="Carlo Eusebi">
     <title>{{ config('app.name', 'Laravel') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/home.scss', 'resources/js/home.js'])
-
-    {{-- poppins --}}
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
-        rel="stylesheet" />
-    {{-- raleway --}}
-    <link
-        href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
-        rel="stylesheet" />
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="icon/ico">
 
 </head>
 
 <body>
     <div class="page flex" x-data="data">
+        <x-navbar />
         {{ $slot }}
     </div>
 </body>

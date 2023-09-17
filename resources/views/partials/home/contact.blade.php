@@ -3,7 +3,9 @@
 
     <p>{{ __('messages.contact-description') }}</p>
 
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-y-5 lg:gap-x-5 my-16">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-y-5 lg:gap-x-5 my-16" x-show="show"
+        x-transition:enter="transition ease-out duration-700 delay-300" x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-1">
 
 
 
@@ -132,7 +134,7 @@
                 </li>
             </ul>
 
-            <iframe
+            <iframe title="map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44030.51860381589!2d13.066081569364652!3d43.80956728770561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d11f261d4a573%3A0x6dbba37380e06b15!2sStr.%20Nazionale%20Adriatica%20Sud%2C%20145A%2C%2061032%20Marotta%20PU!5e0!3m2!1sen!2sit!4v1694881927962!5m2!1sen!2sit"
                 height="350" style="border:0;" allowfullscreen="" loading="lazy" class="w-full"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>

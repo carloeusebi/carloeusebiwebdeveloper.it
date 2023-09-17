@@ -7,7 +7,7 @@
         <div class="flex flex-col items-center">
             {{-- profile pic --}}
             <figure class="profile-pic max-w-[100px] lg:max-w-[150px] aspect-square rounded-full overflow-hidden">
-                <img src="{{ asset('images/profile_pic.webp') }}" alt="Carlo Eusebi">
+                <img src="{{ asset('images/profile_pic.webp') }}" alt="Carlo Eusebi" width="134" height="134">
             </figure>
             <h3 class="text-white text-2xl font-semibold mt-4">Carlo Eusebi</h3>
             <div class="text-white mb-4"><small><em>A Web Developer</em></small></div>
@@ -17,16 +17,19 @@
                 <li>
                     <a target="_blank" href="mailto:carloeusebi@gmail.com">
                         <i class="fa-solid fa-envelope"></i>
+                        <div class="sr-only">carloeusebi@gmail.com</div>
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://www.linkedin.com/in/carlo-eusebi-a283b2271/">
                         <i class="fa-brands fa-linkedin"></i>
+                        <div class="sr-only">Linkedin Profile</div>
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://www.github.com/carloeusebi">
                         <i class="fa-brands fa-github"></i>
+                        <div class="sr-only">Github Page</div>
                     </a>
                 </li>
             </ul>

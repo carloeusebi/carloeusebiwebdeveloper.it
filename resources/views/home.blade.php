@@ -1,15 +1,14 @@
 <x-home-layout>
 
-    @include('partials.home.header')
 
     <main class="overflow-auto p-0 h-screen grow overflow-x-hidden">
 
-        <section id="jumbo" x-intersect:margin.4vh="activeLink = 'jumbo'; show = true" x-intersect:leave="show = false"
-            x-data="{ show: false }">
+        <section id="jumbo" x-intersect:margin.4vh="activeLink = 'jumbo'; show = true" x-data="{ show: false }">
             @include('partials.home.jumbo')
         </section>
 
-        <section id="about" x-intersect:margin.4vh="activeLink = 'about'">
+        <section id="about" x-intersect:margin.4vh="activeLink = 'about'" x-data="{ show: false }"
+            x-intersect:enter="show = true">
             @include('partials.home.about')
         </section>
 
@@ -21,7 +20,8 @@
             @include('partials.home.portfolio')
         </section>
 
-        <section id="contact" x-intersect:margin.4vh="activeLink = 'contact'">
+        <section id="contact" x-intersect:margin.4vh="activeLink = 'contact'" x-data="{ show: false }"
+            x-intersect:enter="show=true">
             @include('partials.home.contact')
         </section>
 
