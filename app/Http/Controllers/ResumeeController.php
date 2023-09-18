@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Vite;
 
 class ResumeeController extends Controller
 {
@@ -21,6 +20,6 @@ class ResumeeController extends Controller
 
         $pdf = PDF::loadView('resumee', compact('cssString'));
 
-        return $pdf->stream('Carlo Eusebi');
+        return $pdf->stream('Carlo Eusebi.pdf');
     }
 }
