@@ -22,6 +22,7 @@
 
             html {
                 font-size: 12px;
+                font-family: sans-serif;
             }
 
             ul {
