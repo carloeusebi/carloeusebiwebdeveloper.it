@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carlo Eusebi</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/resumee.scss'])
 
-    @isset($cssString)
+    @if (isset($cssString))
         {{-- fontawesome --}}
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
             integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=='
             crossorigin='anonymous' />
+
         <style>
             * {
                 box-sizing: border-box;
@@ -43,9 +43,6 @@
                 text-decoration: none;
             }
 
-            hr {
-                border-color: $hover-color;
-            }
 
             h1 {
                 margin-bottom: 1rem;
@@ -64,7 +61,16 @@
 
             {{ $cssString }}
         </style>
-    @endisset
+    @else
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/resumee.scss'])
+
+
+        <style>
+            body {
+                font-family: "Raleway", sans-serif;
+            }
+        </style>
+    @endif
 
 </head>
 

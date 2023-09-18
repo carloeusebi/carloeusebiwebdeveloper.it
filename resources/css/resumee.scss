@@ -1,9 +1,5 @@
 @use "vars" as *;
 
-body {
-    font-family: "Raleway", sans-serif;
-}
-
 #resumee {
     text-align: justify;
 
@@ -22,6 +18,7 @@ body {
     }
 
     hr {
+        border-color: $hover-color;
         margin: 1rem 0;
     }
 
